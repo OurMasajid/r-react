@@ -1,0 +1,28 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.title {
+  font-size: 10vw;
+}
+
+.h1 {
+  font-size: 5vw;
+}
+
+.h2 {
+  font-size: 3.5vw;
+}
+
+.h3 {
+  font-size: 2.3vw;
+}
+
+.prayerCol {
+  margin: auto;
+  border-radius: 6px;
+}
+
+.prayerCol.active {
+  background-color: rgb(232, 255, 219);
+}

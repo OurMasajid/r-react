@@ -3,6 +3,7 @@ import React from 'react';
 import { useLocation } from 'react-router';
 import getData from '../CRUD/crudUtils.js';
 import masjidState from '../states/masjid.js';
+import './styles.css'
 
 export default function PrayerDailyTv1(params) {
   let query = new URLSearchParams(useLocation().search);
@@ -12,12 +13,12 @@ export default function PrayerDailyTv1(params) {
   return (
     <Observer>{() =>
       <div className="container-fluid h-100">
-        <div className="row h-100">
+        <div className="row m-auto h-100">
           <div className="col-12 m-auto">
             <div id="digi-clock">ha</div>
           </div>
         </div>
-        <div className="row">
+        <div className="row align-items-end">
           <div className="col prayerCol Fajr">
             <div className="h2">Fajr</div>
             <div className="h3" id="fajr">{masjidState?.dailyPrayers?.today?.Fajr}</div>
