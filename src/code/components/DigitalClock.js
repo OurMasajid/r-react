@@ -12,10 +12,10 @@ function DigitalClock () {
   
   return (
     <div className='row'>
-      <div className='col-7 text-right p-1'>
-        <span className='title'>{time[0]} : {time[1]}</span>
+      <div className='col-7 text-end p-1'>
+        <span className='title'>{time[0]}:{time[1]}</span>
       </div>
-      <div className='col text-left m-auto'>
+      <div className='col m-auto'>
         <div className='row'>
           <div className='col p-0'>
             <span className='h1' style={{lineHeight: 1}}>{secondsAmPm[0]}</span>
