@@ -1,6 +1,7 @@
 import { Observer } from 'mobx-react';
-import React from 'react';
+import React, { useState } from 'react';
 import { useLocation } from 'react-router';
+import DigitalClock from '../components/DigitalClock.js';
 import getData from '../CRUD/crudUtils.js';
 import masjidState from '../states/masjid.js';
 import './styles.css'
@@ -13,12 +14,12 @@ export default function PrayerDailyTv1(params) {
   return (
     <Observer>{() =>
       <div className="container-fluid h-100">
-        <div className="row m-auto h-100">
+        <div className="row h-100">
           <div className="col-12 m-auto">
-            <div id="digi-clock">ha</div>
+            <div id="digi-clock"><DigitalClock /></div>
           </div>
-        </div>
-        <div className="row align-items-end">
+        {/* </div> */}
+        {/* <div className="row align-items-end"> */}
           <div className="col prayerCol Fajr">
             <div className="h2">Fajr</div>
             <div className="h3" id="fajr">{masjidState?.dailyPrayers?.today?.Fajr}</div>
@@ -27,6 +28,7 @@ export default function PrayerDailyTv1(params) {
           <div className="col prayerCol Sunrise">
             <div className="h2">Sunrise</div>
             <div className="h3" id="sunrise">{masjidState?.dailyPrayers?.today?.Sunrise}</div>
+            <div className="h3 invisible" id="sunrise">{masjidState?.dailyPrayers?.today?.Sunrise}</div>
           </div>
           <div className="col prayerCol Zuhr">
             <div className="h2">Duhr</div>

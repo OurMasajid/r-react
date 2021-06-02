@@ -1,5 +1,14 @@
+html {
+  height: 100%;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
+  height: 100%;
+}
+
+#root {
+  height: 100%;
 }
 
 .title {
@@ -19,7 +28,7 @@ body {
 }
 
 .prayerCol {
-  margin: auto;
+  margin-top: auto;
   border-radius: 6px;
 }
 
