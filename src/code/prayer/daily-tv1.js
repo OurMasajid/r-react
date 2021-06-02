@@ -1,5 +1,5 @@
 import { Observer } from 'mobx-react';
-import React, { useState } from 'react';
+import React from 'react';
 import { useLocation } from 'react-router';
 import DigitalClock from '../components/DigitalClock.js';
 import getData from '../CRUD/crudUtils.js';

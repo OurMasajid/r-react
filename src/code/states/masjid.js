@@ -13,7 +13,7 @@ const masjidState = observable({
     for (let i = 0; i < masjidState.data["Daily Prayer"]["data"].length; i++) {
       const el = masjidState.data["Daily Prayer"]["data"][i];
       // console.log(el);
-      if (el.Month == today.getMonth() + 1 && el.Date == today.getDate()) {
+      if (parseInt(el.Month) === today.getMonth() + 1 && parseInt(el.Date) === today.getDate()) {
         tempDP["today"] = el;
         break;
       }
