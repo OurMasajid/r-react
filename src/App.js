@@ -8,7 +8,8 @@ import {
 
 //custom components
 import PrayerDailyTv1 from './code/prayer/daily-tv1'
-import Home from './code/home';
+import Home from './code/pages/home';
+import MasjidIndex from './code/pages/masjid';
 
 function App() {
   return (
@@ -20,9 +21,10 @@ function App() {
         <Route path="/prayer-tv1">
           <PrayerDailyTv1 />
         </Route>
-        {/* <Route path="/about">
-        <About />
-      </Route>
+        <Route path="/masjid">
+          <MasjidIndex />
+        </Route>
+        {/*
       <Route path="/dashboard">
         <Dashboard />
       </Route> */}
