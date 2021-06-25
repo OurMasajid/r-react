@@ -151,7 +151,7 @@ export default function MasjidIndex(params) {
             "Whoever builds a mosque with the intention of seeking Allah's pleasure, Allah will build for him a place in
         Paradise."<br />
               Sahih Al-Bukhai, Hadith #441 | Vol.1 | Agreed Upon</p>
-          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" style="display:none"><input type="hidden"
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" style={{display:'none'}}><input type="hidden"
             name="cmd" value="_s-xclick" />
             <input type="hidden" name="hosted_button_id" value="TAFAB8228JPUL" /> <input id="paypalbtn" type="image"
               name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif"
@@ -210,11 +210,11 @@ export default function MasjidIndex(params) {
                     className="btn btn-info m-2" />
                 </div>
                 <div id="mce-responses" className="clear">
-                  <div className="response" id="mce-error-response" style="display:none"></div>
-                  <div className="response" id="mce-success-response" style="display:none"></div>
+                  <div className="response" id="mce-error-response" style={{display:'none'}}></div>
+                  <div className="response" id="mce-success-response" style={{display:'none'}}></div>
                 </div>
                 {/* real people should not fill this in and expect good things - do not remove this or risk form bot signups */}
-                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+                <div style={{position: 'absolute', left: '-5000px'}} aria-hidden="true"><input type="text"
                   name="b_429c5653e3594fe7e421551f5_9d44a9d6af" tabindex="-1" value="" /></div>
                 <div className="clear"></div>
               </div>

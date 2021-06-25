@@ -10,6 +10,7 @@ import {
 import PrayerDailyTv1 from './code/prayer/daily-tv1'
 import Home from './code/pages/home';
 import MasjidIndex from './code/pages/masjid';
+import Login from './code/pages/user/login';
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
         </Route>
         <Route path="/masjid">
           <MasjidIndex />
+        </Route>
+        <Route path="/login">
+          <Login />
         </Route>
         {/*
       <Route path="/dashboard">
