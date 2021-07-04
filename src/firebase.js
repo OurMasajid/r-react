@@ -1,8 +1,5 @@
 import firebase from 'firebase/app'
-// import firebaseui from 'firebaseui'
 import 'firebase/auth'
-import 'firebaseui' 
-import userState from './code/states/user';
 
 const config = {
   apiKey: process.env.REACT_APP_APIKEY,
@@ -15,24 +12,19 @@ const config = {
   measurementId: process.env.REACT_APP_MEASUREMENTID
 }
 
+//window.config = config; // for testing
 
-window.config = config;
+firebase.initializeApp(config);
 
-const app = firebase.initializeApp(config);
+// function authChange() {
+//   firebase.auth().onAuthStateChanged(function (userObj) {
+//     if (userObj) {
+//       userState.user = userObj;
+//     }
+//     else {
+//       userState.user = false;
+//     }
+//   })
+// };
 
-function authChange() {
-  firebase.auth().onAuthStateChanged(function (userObj) {
-    if (userObj) {
-      userState.user = userObj;
-    }
-    else {
-      userState.user = false;
-    }
-  })
-};
-
-authChange()
 export { firebase }
-export { firebaseui } 
-export const auth = app.auth()
-export default app

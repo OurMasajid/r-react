@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import AppHeader from '../../components/AppHeader'
 
 export default function MasjidIndex(params) {
@@ -156,7 +155,7 @@ export default function MasjidIndex(params) {
             <input type="hidden" name="hosted_button_id" value="TAFAB8228JPUL" /> <input id="paypalbtn" type="image"
               name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif"
               alt="PayPal - The safer, easier way to pay online!" /></form>
-          {/* <div className="btn btn-info" target="_blank" onclick="paypalbtn.click(); return false;">Donate online</div> */}
+          
           <a className="btn btn-info" href="https://us.mohid.co/tx/austin/icrr/masjid/online/donation">Donate online</a>
           <br />
                   Or mail check to masjid address: <br /><b>​1951 Hampton Ln, Round Rock, TX 78664</b>
@@ -167,8 +166,8 @@ export default function MasjidIndex(params) {
         <hr className="star-light" />
         <div className="container container-small">
           <h3 className="display-3 text-center">Address</h3>
-          <p className="text-center">Islamic center located at <br /><a target="_blank" className="text-dark"
-            href="https://www.google.com/maps/place/Islamic+Center+of+Round+Rock/@30.488992,-97.660475,14z/data=!4m13!1m7!3m6!1s0x8644d1d43e1f1eaf:0x7c93ce4f5e8e534d!2s1951+Hampton+Ln,+Round+Rock,+TX+78664!3b1!8m2!3d30.4912968!4d-97.6591546!3m4!1s0x8644d1d43e0224ab:0xa82587f1cfd8b743!8m2!3d30.4912972!4d-97.6591811?hl=en"><b>1951
+          <p className="text-center">Islamic center located at <br /><a target="_blank" rel="noopener noreferrer" className="text-dark"
+            href={"https://www.google.com/maps/place/Islamic+Center+of+Round+Rock/@30.488992,-97.660475,14z/data=!4m13!1m7!3m6!1s0x8644d1d43e1f1eaf:0x7c93ce4f5e8e534d!2s1951+Hampton+Ln,+Round+Rock,+TX+78664!3b1!8m2!3d30.4912968!4d-97.6591546!3m4!1s0x8644d1d43e0224ab:0xa82587f1cfd8b743!8m2!3d30.4912972!4d-97.6591811?hl=en"}><b>1951
             Hampton Ln, Round Rock, TX 78664</b></a></p>
           <form name="ICRR Contact Form" method="POST" netlify-honeypot="must-message" netlify>
             <div className="form-group">

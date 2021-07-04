@@ -8,7 +8,7 @@ export default function AppHeader(params) {
       <div className="container">
         <div className="navbar-nav">
           <button className="btn text-secondary pl-0" id="btnBack"
-            onclick={()=>history.goBack()}>&lt; back</button>
+            onClick={()=>history.goBack()}>&lt; back</button>
         </div>
         <span className="lead text-secondary mx-auto">Our Masajid</span>
         <div className="">
