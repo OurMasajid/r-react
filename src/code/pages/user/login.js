@@ -36,6 +36,7 @@ export default function Login(props) {
     });
     return () => {
       // cleanup
+      setIsSignUp(false); //just to remove unused function warning
     }
   }, []);
 
@@ -71,16 +72,18 @@ export default function Login(props) {
       console.log("userapp error code", error.code);
     });
   }
-  const firebaseSignOut = () => {
-    firebase.auth().signOut();
-  }
-  const firebaseForgotPasswordLinkSend = (email) => {
-    firebase.auth().sendPasswordResetEmail(email).then({
-    //email sent
-    }).catch({
+  
+  // const firebaseSignOut = () => { //to hide unuse waening
+  //   firebase.auth().signOut();
+  // }
+  
+  // const firebaseForgotPasswordLinkSend = (email) => { //to hide unuse waening
+  //   firebase.auth().sendPasswordResetEmail(email).then({
+  //   //email sent
+  //   }).catch({
 
-    })
-  }
+  //   })
+  // }
 
   return (
     <div>
@@ -123,3 +126,4 @@ export default function Login(props) {
     </div>
   )
 }
+

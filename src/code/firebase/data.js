@@ -1,5 +1,5 @@
 import userState from '../states/user';
-import { showIndicator, hideIndicator } from './../components/Indicator'
+import { hideIndicator } from './../components/Indicator'
 import { firebase } from './firebase'
 // function save(formNameParam) {
 //   setTimeout(showIndicator("Saving..."));
@@ -98,7 +98,7 @@ export function readData2(docId) {
   });
 }
 
-function getUserApps() {
+export function getUserApps() {
   if (userState.user) {
     firebase.firestore().collection("apps").where("owner", "array-contains", userState.user.email)
       .onSnapshot(function (querySnapshot) {
