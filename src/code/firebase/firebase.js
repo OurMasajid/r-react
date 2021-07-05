@@ -1,5 +1,6 @@
 import firebase from 'firebase/app'
 import 'firebase/auth'
+import 'firebase/firestore'
 
 const config = {
   apiKey: process.env.REACT_APP_APIKEY,
@@ -12,19 +13,21 @@ const config = {
   measurementId: process.env.REACT_APP_MEASUREMENTID
 }
 
-//window.config = config; // for testing
-
 firebase.initializeApp(config);
 
-// function authChange() {
-//   firebase.auth().onAuthStateChanged(function (userObj) {
-//     if (userObj) {
-//       userState.user = userObj;
-//     }
-//     else {
-//       userState.user = false;
-//     }
-//   })
-// };
+//making data avaialble offline
+firebase.firestore().enablePersistence()
+  .catch(function (err) {
+    // showIndicator("Something went wrong! Code 11", 10);
+    if (err.code === 'failed-precondition') {
+      // Multiple tabs open, persistence can only be enabled
+      // in one tab at a a time.
+      // ...
+    } else if (err.code === 'unimplemented') {
+      // The current browser does not support all of the
+      // features required to enable persistence
+      // ...
+    }
+  });
 
 export { firebase }

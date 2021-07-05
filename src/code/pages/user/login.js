@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Modal } from 'bootstrap/dist/js/bootstrap.bundle'
-import { firebase } from "../../../firebase";
+import { firebase } from "../../firebase/firebase.js";
 import userState from '../../states/user';
 
 /**
