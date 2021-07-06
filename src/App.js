@@ -9,7 +9,7 @@ import {
 //custom components
 import PrayerDailyTv1 from './code/prayer/daily-tv1'
 import Home from './code/pages/home';
-import MasjidIndex from './code/pages/masjid';
+import MasjidIndex from './code/pages/masjid/index2';
 import Login from './code/pages/user/login';
 
 function App() {

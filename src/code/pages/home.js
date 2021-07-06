@@ -1,22 +1,24 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import AppHeader from '../components/AppHeader'
 import masjidState from '../states/masjid';
 import {readData2} from '../firebase/data'
-import { showIndicator } from '../components/Indicator';
+import { hideIndicator, showIndicator } from '../components/Indicator';
 
 export default function Home(params) {
+  let history = useHistory();
   const searchMasjid = async (e) => {
+    showIndicator("Looking for masjid.");
     console.log("searchMasjid called");
     e.preventDefault();
     masjidState.data = await readData2(new FormData(e.target).get("masjidCode"));
+    hideIndicator();
     if (!masjidState.data) {
-      console.log("found NOT masjid");
-      showIndicator("Wrong masjid code.", 5);
+      showIndicator("Wrong masjid code.", 3);
     }
     else{
       console.log("found masjid");
-      showIndicator("Now redirect to masjid component.", 5);
+      history.push("/masjid")
     }
   }
   const clearSearchHistory = () => {
